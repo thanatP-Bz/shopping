@@ -65,7 +65,7 @@ const Navbar = () => {
             </Link>
           </div>
 
-          <div className="icons">
+          <div className="navbar-icons">
             <SearchIcon />
             <PersonOutlineIcon />
             <FavoriteBorderIcon />
