@@ -13,7 +13,7 @@ const Products = () => {
 
   return (
     <div className="products">
-      <div className="left">
+      <div className="left-products">
         <div className="filterItem">
           <h2>Product Categories</h2>
           <div className="inputItem">
@@ -72,7 +72,7 @@ const Products = () => {
           </div>
         </div>
       </div>
-      <div className="right">
+      <div className="right-products">
         <img src={img5} alt="catImg" className="catImg" />
         <List catId={catId} maxPrice={maxPrice} sort={sort} />
       </div>

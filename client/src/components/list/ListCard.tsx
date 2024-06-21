@@ -1,4 +1,4 @@
-import "./Card.scss";
+import "./ListCard.scss";
 import { Link } from "react-router-dom";
 
 interface Img {
@@ -19,7 +19,7 @@ interface CardProps {
   item: Item;
 }
 
-const Card: React.FC<CardProps> = ({ item }) => {
+const ListCard: React.FC<CardProps> = ({ item }) => {
   return (
     <Link className="link" to={`/product/${item.id}`}>
       <div className="card">
@@ -39,4 +39,4 @@ const Card: React.FC<CardProps> = ({ item }) => {
   );
 };
 
-export default Card;
+export default ListCard;

@@ -4,7 +4,7 @@ import img2 from "../../../public/img/pic-2.jpg";
 import img3 from "../../../public/img/pic-3.jpg";
 import img4 from "../../../public/img/pic-4.jpg";
 
-import Card from "../card/Card";
+import ListCard from "./ListCard";
 
 interface Img {
   img1?: string;
@@ -45,18 +45,6 @@ const data: Item[] = [
     oldPrice: 19,
     price: 12,
   },
-  {
-    id: 5,
-    img: { img4 },
-    oldPrice: 19,
-    price: 12,
-  },
-  {
-    id: 6,
-    img: { img4 },
-    oldPrice: 19,
-    price: 12,
-  },
 ];
 
 interface MyComponentProps {
@@ -69,7 +57,7 @@ const List: React.FC<MyComponentProps> = ({ catId, maxPrice, sort }) => {
   return (
     <div className="list">
       {data?.map((item) => (
-        <Card item={item} key={item.id} />
+        <ListCard item={item} key={item.id} />
       ))}
     </div>
   );
