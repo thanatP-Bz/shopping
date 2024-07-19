@@ -17,6 +17,8 @@ interface Img {
 interface Item {
   id: number;
   img: Img;
+  title: string;
+  isNew: boolean;
   oldPrice: number;
   price: number;
 }
@@ -25,24 +27,32 @@ const data: Item[] = [
   {
     id: 1,
     img: { img1 },
+    title: "shirt",
+    isNew: true,
     oldPrice: 19,
     price: 12,
   },
   {
     id: 2,
     img: { img2 },
+    title: "shirt",
+    isNew: true,
     oldPrice: 19,
     price: 12,
   },
   {
     id: 3,
     img: { img3 },
+    title: "shirt",
+    isNew: true,
     oldPrice: 19,
     price: 12,
   },
   {
     id: 4,
     img: { img4 },
+    title: "shirt",
+    isNew: true,
     oldPrice: 19,
     price: 12,
   },

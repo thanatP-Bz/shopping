@@ -11,6 +11,7 @@ const images = [img6, img7];
 
 const Product = () => {
   const [selectedImg, setSelectedImg] = useState<number>(0);
+  const [quatity, setQuatity] = useState<number>(1);
 
   return (
     <div className="product">
@@ -38,7 +39,7 @@ const Product = () => {
         </div>
         <div className="right">
           <h1>title</h1>
-          <span className="price">$199</span>
+          <span className="price">$109</span>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga
             accusamus blanditiis modi. Quia explicabo enim officia, consequuntur
@@ -46,9 +47,13 @@ const Product = () => {
             consectetur repudiandae ab quisquam.
           </p>
           <div className="quantity">
-            <button>-</button>
-
-            <button>+</button>
+            <button
+              onClick={() => setQuatity((prev) => (prev === 1 ? 1 : prev - 1))}
+            >
+              -
+            </button>
+            {quatity}
+            <button onClick={() => setQuatity((prev) => prev + 1)}>+</button>
           </div>
           <button className="add">
             <AddShoppingCartIcon /> ADD TO CART
